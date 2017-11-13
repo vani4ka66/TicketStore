@@ -1,0 +1,270 @@
+﻿@using Microsoft.Ajax.Utilities
+@model TicketStore.Models.ViewModels.Category.EventViewModel
+
+@{
+    ViewBag.Title = "TicketDetails";
+}
+
+<br />
+<div class="container-fluid" style="background: gray">
+    <br>
+    <div class="row text-center">
+        <div class="col-sm-1">
+        </div>
+
+        <div class="col-sm-2">
+            <figure class="product-category">
+                <h4 style="color: orange">@Html.DisplayFor(vms => vms.Hour)</h4>
+                <h4 style="color: white">@Html.DisplayFor(vms => vms.DateDetails)</h4>
+            </figure>
+        </div>
+        <div class="col-sm-1">
+            <figure class="product-category">
+                <p></p>
+            </figure>
+        </div>
+        <div class="col-sm-2">
+            <figure class="product-category">
+                <h3 style="color: orange">@Html.DisplayFor(vms => vms.Name)</h3>
+            </figure>
+
+
+        </div>
+        <div class="col-sm-1">
+            <figure class="product-category">
+                <p></p>
+            </figure>
+        </div>
+        <div class="col-sm-2">
+            <figure class="product-category">
+                <h4 style="color: orange;">@Html.DisplayFor(vms => vms.Place)</h4>
+                <h4 style="color: white;">@Html.DisplayFor(vms => vms.CityCountry)</h4>
+            </figure>
+        </div>
+    </div>
+</div>
+<br />
+
+<h1 align="center" style="color: darkorange">Choose Tickets</></h1>
+
+<hr>
+<div class="container-fluid">
+    <div class="row text-center">
+        <div class="col-sm-6">
+            <figure class="product-category" style="background: black">
+                <div class="col-sm-1" style="background-color: red">
+                    <div style="color: red">
+                        aaaa
+                    </div><br /><br /><br /><br /><br /><br /><br />
+                    <div style="color: red">
+                        aaaa
+                    </div><br />
+                </div><br />
+
+                <a href="#">
+                    <br>
+                    <h3>Price Category</h3>
+                    <h3>20 BGN</h3>
+                    <br>
+                </a>
+                <select class="sel btn btn-default">
+                    <option label="0" value="">&nbsp;</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+                <a href="../../Category/PaymentDetails/@Html.DisplayFor(vms=> vms.Id)" class="stayOrange btn btn-default">Reserve tickets</a>
+                <br>
+            </figure>
+            <br />
+            <figure class="product-category" style="background: black">
+                <div class="col-sm-1" style="background-color: yellow">
+                    <div style="color: yellow">
+                        aaaa
+                    </div><br/><br/><br/><br/><br/><br/><br/>
+                    <div style="color: yellow">
+                        aaaa
+                    </div><br/>
+                </div><br/>
+                <a href="#">
+                    <br>
+                    <h3>Front Of Stage - Stehplatz</h3>
+                    <h3>30 BGN</h3>
+                    <br>
+                </a>
+                <div class="dropdown btn btn-default">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">0 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#">7</a></li>
+                        <li><a href="#">8</a></li>
+                    </ul>
+
+                </div>
+                <a href="../../Category/PaymentDetails" class="btn btn-default">Reserve tickets</a>
+                <br>
+            </figure>
+            <br />
+            <figure class="product-category" style="background: black">
+                <div class="col-sm-1" style="background-color: darkviolet">
+                    <div style="color: darkviolet">
+                        a
+                    </div><br /><br /><br /><br /><br /><br /><br />
+                    <div style="color: darkviolet">
+                        a
+                    </div><br />
+                </div><br />
+                <a href="#">
+                    <br>
+                    <h3>Front Of Stage - Stehplatz</h3>
+                    <h3>40 BGN</h3>
+                    <br>
+                </a>
+                <div class="dropdown btn btn-default">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">0 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#">7</a></li>
+                        <li><a href="#">8</a></li>
+                    </ul>
+
+                </div>
+                <a href="../../Category/PaymentDetails" class="btn btn-default">Reserve tickets</a>
+                <br>
+            </figure>
+            <br />
+            <figure class="product-category">
+                <div class="col-sm-1" style="background-color: blue">
+                    <div style="color: blue">
+                        aaaa
+                    </div><br /><br /><br /><br /><br /><br /><br />
+                    <div style="color: blue">
+                        aaaa
+                    </div><br />
+                </div><br />
+                <a href="#">
+                    <br>
+                    <h3>Front Of Stage - Stehplatz</h3>
+                    <h3>50 BGN</h3>
+                    <br>
+                </a>
+                <div class="dropdown btn btn-default">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">0 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#">7</a></li>
+                        <li><a href="#">8</a></li>
+                    </ul>
+
+                </div>
+                <a href="../../Category/PaymentDetails" class="btn btn-default">Reserve tickets</a>
+                <br>
+            </figure>
+            <br />
+            <figure class="product-category">
+                <div class="col-sm-1" style="background-color: deeppink">
+                    <div style="color: deeppink">
+                        aaaa
+                    </div><br /><br /><br /><br /><br /><br /><br />
+                    <div style="color: deeppink">
+                        aaaa
+                    </div><br />
+                </div><br />
+                <a href="#">
+                    <br>
+                    <h3>Front Of Stage - Stehplatz</h3>
+                    <h3>60 BGN</h3>
+                    <br>
+                </a>
+                <div class="dropdown btn btn-default">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">0 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#">7</a></li>
+                        <li><a href="#">8</a></li>
+                    </ul>
+
+                    </div">
+                    <a id="reserve" href="../../Category/PaymentDetails" class="btn btn-default">Reserve tickets</a>
+                    <br>
+            </figure>
+            <br />
+            
+        </div>
+
+        <div class="col-sm-4">
+            <div id="sheme">
+                <figure class="product-category">
+                    <figcaption>
+                        <br /><br />
+                        <p>
+                            <h3 style="color: red">Please use the interactive scheme! (If there is an event active for that event)</h3>
+                        </p>
+                        <br />
+                        <p class="col-sm-offset-3">
+                            <a href="#" class="btn btn-default col-md-8" style="background-color: darkorange" onclick="seeScheme()">See the scheme</a><br />
+                        </p>
+                        <br />
+                        <h4 style="color: white">More information</h4>
+                        <p style="color: white">Once you add the tickets to your cart, they will be reserved for 20 minutes.</p>
+
+                        <p style="color: white">
+                            <strong>Note: </strong>Your chosen tickets will be reserved for 20 minutes, after which the reservation will be canceled automatically. You can order max. 8 tickets from one price category at a time. If you would like to select more tickets for this show, click on the "Ticket from a different price category" button on the next page.
+                        </p>
+                        <p style="color: white">
+                            <strong>The security of your data and the payment process are secure</strong>
+                        </p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+@section scripts{
+    <script>
+        function seeScheme() {
+            $('#sheme')
+                .text('')
+                .append($('<img src="../../Content/images/index/scheme1.jpg" alt="" width="660" height="800">'));
+        }
+    </script>
+
+    <script>
+        if ($(".sel option:selected").text() !== "")
+        {
+            //alert("VVVVV");
+            $(".stayOrange").disable = true;
+        }
+        else {
+            alert("PPPPP");
+
+            //$(".stayOrange").style.color = "blue";
+        }
+       
+    </script>
+}
+
+
+
+

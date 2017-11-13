@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/css/Site.css")
+    @Styles.Render("~/Content/css/Ticket.css")
+    @Styles.Render("~/Content/less")
+    @Styles.Render("~/Content/scss")
+    @Scripts.Render("~/bundles/modernizr")
+  
+
+</head>
+<body>
+    <div class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("CULTURE & MUSIC", "Index", "Home", new { area = "" }, new { @class = "navbar-brand", @style = "color: blue" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("         ", "", "")</li>
+                    <li>@Html.ActionLink("         ", "", "")</li>
+
+                    <li>@Html.ActionLink("HOME", "Index", "Home", new { area = "" }, new { @style = "color: deeppink" })</li>
+
+
+
+                    @*@using (Html.BeginForm("AllCategories", "Category"))
+                        {
+                            @Html.DropDownList("Id", new SelectList(ViewBag.AllCategories, "Id", "Name"), new { @class = "form-control", onchange = "$(this.form).submit();" })
+                        };*@
+
+                    @*<li class="dropdown">
+                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Събития <span class="caret"></span></a>
+                             <ul class="dropdown-menu" role="menu">
+                                 <li>@Html.ActionLink("Концерти", "Concerts", "Category")</li>
+                                 <li>@Html.ActionLink("Култура", "Culture", "Category")</li>
+                                 <li>@Html.ActionLink("Спорт", "Sport", "Category")</li>
+                                 <li>@Html.ActionLink("Други", "OtherEvents", "Category")</li>
+                             </ul>
+                        </li>*@
+
+                    <li>@Html.ActionLink("CONCERTS", "Concerts", "Category", new { area = "" }, new { @style = "color: yellow" })</li>
+                    <li>@Html.ActionLink("CULTURE", "Culture", "Category", new { area = "" }, new { @style = "color: lawngreen" })</li>
+                    <li>@Html.ActionLink("SPORTS", "Sport", "Category", new { area = "" }, new { @style = "color: red" })</li>
+                    <li>@Html.ActionLink("OTHER EVENTS", "OtherEvents", "Category", new { area = "" }, new { @style = "color: aqua" })</li>
+
+                    <li>@Html.ActionLink("MY ACCOUNT", "MyProfile", "Customer", new { area = "" }, new { @style = "color: blue" })</li>
+                </ul>
+
+                @*<form class="navbar-form navbar-left">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>*@
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+
+    @RenderBody()
+    <div style="color: black">V</div>
+    <div class="container-fluid" style="background-color: darkslategray">
+
+        <footer class="index">
+            <br />
+            <div>
+                <div class="">
+                    <div class="col-sm-2">
+                        <a href="#"><h4></h4></a>
+                    </div>
+                    <div class="col-sm-2">
+                        <h4>@Html.ActionLink("About Us", "Concerts", "Category", new { @style = "color: deeppink" })</h4>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href="#"><h4>@Html.ActionLink("Clients", "Concerts", "Category", new {area=""},  new { @style = "color: yellow" })</h4></a>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href="#"><h4>@Html.ActionLink("Contact Us", "Contact", "Home", new { area = "" }, new { @style = "color: blue" })</h4></a>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href="#"><h4>@Html.ActionLink("More Culture & Music", "Concerts", "Category", new { area = "" }, new { @style = "color: lawngreen" })</h4></a>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </footer>
+        <br />
+        <br />
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

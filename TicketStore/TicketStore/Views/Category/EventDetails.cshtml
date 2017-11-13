@@ -1,0 +1,97 @@
+﻿@model TicketStore.Models.ViewModels.Category.EventViewModel
+
+@{
+    ViewBag.Title = "ConcertDetails";
+}
+
+<br />
+<div class="container-fluid" style="background: gray">
+    <br>
+    <div class="row text-center">
+        <div class="col-sm-1">
+
+        </div>
+
+        <div class="col-sm-2">
+            <figure class="product-category">
+                <h4 style="color: orange">@Html.DisplayFor(vms => vms.Hour)</h4>
+                <h4 style="color: white">@Html.DisplayFor(vms => vms.DateDetails)</h4>
+            </figure>
+        </div>
+        <div class="col-sm-1">
+            <figure class="product-category">
+                <p></p>
+            </figure>
+        </div>
+        <div class="col-sm-2">
+            <figure class="product-category">
+                <h3 style="color: orange">@Html.DisplayFor(vms => vms.Name)</h3>
+            </figure>
+
+
+        </div>
+        <div class="col-sm-1">
+            <figure class="product-category">
+                <p></p>
+            </figure>
+        </div>
+        <div class="col-sm-2">
+            <figure class="product-category">
+                <h4 style="color: orange;">@Html.DisplayFor(vms => vms.Place)</h4>
+                <h4 style="color: white;">@Html.DisplayFor(vms => vms.CityCountry)</h4>
+            </figure>
+        </div>
+
+        <div class="col-sm-2">
+            <a href="/Category/TicketDetails/@Html.DisplayFor(vms => vms.Id)" class="btn btn-success btn-lg">Tickets</a>
+        </div>
+    </div>
+</div>
+
+<br />
+
+<div class="container" style="background: gray">
+    <br>
+    <div class="row text-center">
+
+        <div class="col-sm-3">
+            <div><img src="@Html.DisplayFor(vms => vms.Image)" width="300" height="300" /></div>
+            <br />
+            <div>
+                @if (Model.Vote == null)
+                {
+                    Model.Vote = 0;
+                }
+                <div id="voteCounts">@Html.DisplayFor(vms => vms.Vote)</div>
+
+                @using (Html.BeginForm("VoteNow", "Category", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+
+                    @Html.ValidationSummary(true, "", new {@class = "text-danger"})
+                    @Html.HiddenFor(m => m.Id)
+
+                    <input type="submit" class="btn btn-success btn-lg" value="Vote"/>
+                }
+
+            </div>
+            <br />
+        </div>
+
+        <div class="col-sm-1">
+            <figure class="product-category">
+                <p></p>
+            </figure>
+        </div>
+        <div class="col-sm-7">
+            <h4><strong>@Html.DisplayFor(vms => vms.Title)</strong></h4>
+            <p>@Html.DisplayFor(vms => vms.Content)</p>
+        </div>
+    </div>
+</div>
+<br>
+
+
+
+
+

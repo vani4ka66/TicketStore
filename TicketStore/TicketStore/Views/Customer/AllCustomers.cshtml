@@ -1,0 +1,14 @@
+﻿@model IEnumerable<TicketStore.Models.EntityModels.Customer>
+
+@{
+    ViewBag.Title = "AllCustomers";
+}
+
+<h2>AllCustomers</h2>
+
+@foreach (var vm in Model)
+{
+    @Html.DisplayFor(vms => vm.FullName)
+    <div>Hello</div>
+}
+

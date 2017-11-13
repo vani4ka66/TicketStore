@@ -1,0 +1,88 @@
+﻿@model IEnumerable<TicketStore.Models.ViewModels.Category.CategoryViewModel>
+
+@{
+    ViewBag.Title = "Concerts";
+    int counter = 1;
+}
+
+<br />
+<br/>
+<div class="container body-content">
+    <div>
+        <h1 align="center" style="color: yellow">Concerts</h1>
+        <center>
+            <a href="/Admin/Admin/AddCategory">
+                <button class="btn btn-danger btn-lg">Create New Category</button>
+            </a>
+        </center>
+
+</div>
+    <hr>
+
+    @foreach (var vm in Model)
+    {
+        if (counter%3 == 0)
+        {
+            <div>
+                <div class="row text-center">
+                    <div class="col-sm-4">
+                        <figure class="product-category">
+                            <a href="./EventsTable/@Html.DisplayFor(vms => vm.Id)">
+                                <img src="@Html.DisplayFor(vms => vm.Image)" alt="" width="300" height="300"/>
+                            </a>
+                            <a href="./EventsTable/@Html.DisplayFor(vms => vm.Id)">
+                                <figcaption>
+                                    <h3 class="row text-center">@Html.DisplayFor(vms => vm.Name, null)</h3>
+                                </figcaption>
+                            </a>
+                        </figure>
+                        <center>
+                            <a href="/Admin/Admin/EditCategory/@Html.DisplayFor(vms => vm.Id)">
+                                <button class="btn">Edit </button>
+                            </a>
+                            <a href="/Admin/Admin/DeleteCategory/@Html.DisplayFor(vms => vm.Id)">
+                                <button class="btn btn-danger">Delete</button>
+                            </a>
+                        </center>
+                    </div>
+                    <br>
+                </div>
+            </div>
+
+            counter++;
+        }
+        else
+        {
+            <div class="col-sm-4">
+                <figure class="product-category">
+                    <a href="./EventsTable/@Html.DisplayFor(vms => vm.Id)">
+                        <img src="@Html.DisplayFor(vms => vm.Image)" alt="" width="300" height="300"/>
+                    </a>
+                    <a href="./EventsTable/@Html.DisplayFor(vms => vm.Id)">
+                        <figcaption>
+                            <h3 class="row text-center">@Html.DisplayFor(vms => vm.Name, null)</h3>
+                        </figcaption>
+                    </a>
+                </figure>
+                <center>
+                    <a href="/Admin/Admin/EditCategory/@Html.DisplayFor(vms => vm.Id)">
+                        <button class="btn">Edit </button>
+                    </a>
+                    <a href="/Admin/Admin/DeleteCategory/@Html.DisplayFor(vms => vm.Id)">
+                        <button class="btn btn-danger">Delete</button>
+                    </a>
+                </center>
+                <br>
+            </div>
+
+            counter++;
+        }
+    }
+
+</div>
+
+
+
+
+
+   

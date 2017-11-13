@@ -1,0 +1,201 @@
+﻿@model TicketStore.Models.BindingModels.Event.EventBindingModel
+
+@{
+    ViewBag.Title = "AddEvent";
+}
+
+<div class="container">
+    <br />
+    <br />
+    <center>
+        <h2 style="color: red">Create Event</h2>
+    </center>
+    <br />
+    <br />
+    <div class="row text-center">
+        <div class="col-sm-4">
+        </div>
+        @using (Html.BeginForm("AddEvent", "Admin", FormMethod.Post, new { @class = "col-sm-5" }))
+        {
+            @Html.AntiForgeryToken()
+            <center>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            @Html.EditorFor(m => m.Name, new { htmlAttributes = new { @class = "form-control", required = "true", PlaceHolder = "Enter event Name" } })
+                            @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+                        </div>
+                        <br />
+                    </div>
+                </div>
+            </center>
+
+            <div>
+                <br />
+            </div>
+
+            <center>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            @Html.EditorFor(m => m.Image, new { htmlAttributes = new { @class = "form-control", type = "text", required = "false", PlaceHolder = "Enter event Image" } })
+                            @Html.ValidationMessageFor(m => m.Image, "", new { @class = "text-danger" })
+                        </div>
+                        <br />
+                    </div>
+                </div>
+            </center>
+
+            <div>
+                <br />
+            </div>
+
+            <center>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            @Html.EditorFor(m => m.Title, new { htmlAttributes = new { @class = "form-control", type = "text", required = "false", PlaceHolder = "Enter event Title" } })
+                            @Html.ValidationMessageFor(m => m.Title, "", new { @class = "text-danger" })
+                        </div>
+                        <br />
+                    </div>
+                </div>
+            </center>
+
+            <div>
+                <br />
+            </div>
+
+            <center>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            @Html.EditorFor(m => m.Content, new { htmlAttributes = new { @class = "form-control", type = "text", required = "false", PlaceHolder = "Enter event Content" } })
+                            @Html.ValidationMessageFor(m => m.Content, "", new { @class = "text-danger" })
+                        </div>
+                        <br />
+                    </div>
+                </div>
+            </center>
+
+            <div>
+                <br />
+            </div>
+
+            <center>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            @Html.EditorFor(m => m.DateDetails, new { htmlAttributes = new { @class = "form-control", type = "text", required = "false", PlaceHolder = "Enter event Date details" } })
+                            @Html.ValidationMessageFor(m => m.DateDetails, "", new { @class = "text-danger" })
+                        </div>
+                        <br />
+                    </div>
+                </div>
+            </center>
+
+            <div>
+                <br />
+            </div>
+
+            <center>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            @Html.EditorFor(m => m.Hour, new { htmlAttributes = new { @class = "form-control", type = "text", required = "false", PlaceHolder = "Enter event Hour" } })
+                            @Html.ValidationMessageFor(m => m.Hour, "", new { @class = "text-danger" })
+                        </div>
+                        <br />
+                    </div>
+                </div>
+            </center>
+
+            <div>
+                <br />
+            </div>
+
+            <center>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            @Html.EditorFor(m => m.Place, new { htmlAttributes = new { @class = "form-control", type = "text", required = "false", PlaceHolder = "Enter event Place" } })
+                            @Html.ValidationMessageFor(m => m.Place, "", new { @class = "text-danger" })
+                        </div>
+                        <br />
+                    </div>
+                </div>
+            </center>
+
+            @*<center>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            @Html.DropDownListFor(x => x.PlaceId, new List<SelectListItem>(ViewBag.PlacesNames), "--- Select Place --- ", new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.PlaceId, "", new { @class = "text-danger" })
+                        </div>
+                        <br />
+                    </div>
+                </div>
+            </center>*@
+
+            <div>
+                <br />
+            </div>
+
+            <center>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            @Html.EditorFor(m => m.CityCountry, new {htmlAttributes = new {@class = "form-control", type = "text", required = "false", PlaceHolder = "Enter event City / Country"}})
+                            @Html.ValidationMessageFor(m => m.CityCountry, "", new {@class = "text-danger"})
+                        </div>
+                        <br/>
+                    </div>
+                </div>
+            </center>
+
+            <div>
+                <br />
+            </div>
+
+            <center>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            @Html.EditorFor(m => m.Prices, new { htmlAttributes = new { @class = "form-control", type = "text", required = "false", PlaceHolder = "Enter ticket prices separated by a comma" } })
+                            @Html.ValidationMessageFor(m => m.Prices, "", new { @class = "text-danger" })
+                        </div>
+                        <br />
+                    </div>
+                </div>
+            </center>
+
+            <div>
+                <br />
+            </div>
+            <center>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            @Html.DropDownListFor(x => x.CategoryId, new List<SelectListItem>(ViewBag.SubCategoriesNames), "--- Select Sub Category--- ", new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.CategoryId, "", new { @class = "text-danger" })
+                        </div>
+                        <br />
+                    </div>
+                </div>
+            </center>
+
+            <div>
+                <br />
+            </div>
+            <div class="col-sm-10">
+                <input type="submit" id="btn-add-category" class="btn btn-primary btn-lg" value="Save" />
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+        }
+    </div>
+</div>
