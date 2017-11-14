@@ -12,6 +12,7 @@ using TicketStore.Models.EntityModels;
 using TicketStore.Models.ViewModels.Account;
 using TicketStore.Models.ViewModels.Category;
 using TicketStore.Models.ViewModels.Customer;
+using TicketStore.Models.ViewModels.Event;
 
 namespace TicketStore
 {

@@ -122,10 +122,12 @@
     <Compile Include="ViewModels\Account\ResetPasswordViewModel.cs" />
     <Compile Include="ViewModels\Account\SendCodeViewModel.cs" />
     <Compile Include="ViewModels\Account\VerifyCodeViewModel.cs" />
+    <Compile Include="ViewModels\All.cs" />
     <Compile Include="ViewModels\Category\AllCategoriesViewModel.cs" />
     <Compile Include="ViewModels\Category\CategoryViewModel.cs" />
-    <Compile Include="ViewModels\Category\EventViewModel.cs" />
+    <Compile Include="ViewModels\Event\EventViewModel.cs" />
     <Compile Include="ViewModels\Customer\CustomerProfileViewModel.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
     <Compile Include="ViewModels\Manage\AddPhoneNumberViewModel.cs" />
     <Compile Include="ViewModels\Manage\ChangePasswordViewModel.cs" />
     <Compile Include="ViewModels\Manage\ConfigureTwoFactorViewModel.cs" />

@@ -12,7 +12,7 @@ namespace TicketStore.Models.ViewModels.Customer
     {
         public CustomerProfileViewModel()
         {
-            this.Events = new HashSet<Event>();
+            this.Events = new HashSet<EntityModels.Event>();
         }
 
         [Key]
@@ -32,7 +32,7 @@ namespace TicketStore.Models.ViewModels.Customer
 
         public virtual ApplicationUser User { get; set; }
 
-        public virtual ICollection<Event> Events { get; set; }
+        public virtual ICollection<EntityModels.Event> Events { get; set; }
 
         public string Address { get; set; }
 

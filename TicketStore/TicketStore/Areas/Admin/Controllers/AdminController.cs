@@ -111,8 +111,6 @@ namespace TicketStore.Areas.Admin.Controllers
         {
             ViewBag.SubCategoriesNames = this.service.GetSubCategoriesNames();
 
-            //ViewBag.PlacesNames = this.service.GetPlacesNames();
-
             return View();
         }
 
@@ -122,7 +120,7 @@ namespace TicketStore.Areas.Admin.Controllers
         {
             this.service.PostAddEvent(bind);
 
-            string url = "/category/EventsTable/" + bind.CategoryId;
+            string url = "/event/EventsTable/" + bind.CategoryId;
 
             return Redirect(url);
         }
@@ -135,8 +133,6 @@ namespace TicketStore.Areas.Admin.Controllers
 
             ViewBag.SubCategoriesNames = this.service.GetSubCategoriesNames();
 
-            //ViewBag.PlacesNames = this.service.GetPlacesNames();
-
             return View(view);
         }
 
@@ -146,7 +142,7 @@ namespace TicketStore.Areas.Admin.Controllers
         {
             this.service.PostEditEvent(bind);
 
-            string url = "/category/EventsTable/" + bind.CategoryId;
+            string url = "/event/EventsTable/" + bind.CategoryId;
 
             return  Redirect(url);
         }
@@ -166,7 +162,7 @@ namespace TicketStore.Areas.Admin.Controllers
         {
             this.service.PostDeleteEvent(bind);
 
-            string url = "/category/EventsTable/" + bind.CategoryId;
+            string url = "/event/EventsTable/" + bind.CategoryId;
 
             return Redirect(url);
         }

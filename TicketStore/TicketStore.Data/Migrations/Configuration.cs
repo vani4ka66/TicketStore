@@ -79,7 +79,7 @@ namespace TicketStore.Data.Migrations
                                 {
                                     Name = "Guns 'N' Roses",
                                     Image = "../../Content/images/index/guns-n-roses.jpg",
-                                    Place = "Arena Armeec",
+                                    Location = "Arena Armeec",
                                     DateDetails = "Friday, 03 Nov 2017",
                                     Title = "Tle Ones Guns and Roses",
                                     Content = "yfglwjrgfo;reihgvekjjdhvwihvwhnwliherrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv",

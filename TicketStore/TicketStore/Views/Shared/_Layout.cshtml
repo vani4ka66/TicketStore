@@ -26,10 +26,9 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("         ", "", "")</li>
-                    <li>@Html.ActionLink("         ", "", "")</li>
+                    <li>@Html.ActionLink("   ", "", "")</li>
 
-                    <li>@Html.ActionLink("HOME", "Index", "Home", new { area = "" }, new { @style = "color: deeppink" })</li>
+                    @*<li>@Html.ActionLink("HOME", "Index", "Home", new { area = "" }, new { @style = "color: deeppink" })</li>*@
 
 
 
@@ -49,11 +48,11 @@
                         </li>*@
 
                     <li>@Html.ActionLink("CONCERTS", "Concerts", "Category", new { area = "" }, new { @style = "color: yellow" })</li>
-                    <li>@Html.ActionLink("CULTURE", "Culture", "Category", new { area = "" }, new { @style = "color: lawngreen" })</li>
-                    <li>@Html.ActionLink("SPORTS", "Sport", "Category", new { area = "" }, new { @style = "color: red" })</li>
+                    <li>@Html.ActionLink("CULTURE", "Culture", "Category", new { area = "" }, new { @style = "color: deeppink" })</li>
+                    <li>@Html.ActionLink("SPORTS", "Sport", "Category", new { area = "" }, new { @style = "color: lawngreen" })</li>
                     <li>@Html.ActionLink("OTHER EVENTS", "OtherEvents", "Category", new { area = "" }, new { @style = "color: aqua" })</li>
+                    <li>@Html.ActionLink("SEARCH", "SearchForm", "Search", new { area = "" }, new { @class = "btn btn-danger" , @style="color: black"})</li>
 
-                    <li>@Html.ActionLink("MY ACCOUNT", "MyProfile", "Customer", new { area = "" }, new { @style = "color: blue" })</li>
                 </ul>
 
                 @*<form class="navbar-form navbar-left">
@@ -83,7 +82,7 @@
                         <a href="#"><h4></h4></a>
                     </div>
                     <div class="col-sm-2">
-                        <h4>@Html.ActionLink("About Us", "Concerts", "Category", new { @style = "color: deeppink" })</h4>
+                        <h4>@Html.ActionLink("About Us", "About", "Home", new { area = "" }, new { @style = "color: deeppink" })</h4>
                     </div>
                     <div class="col-sm-2">
                         <a href="#"><h4>@Html.ActionLink("Clients", "Concerts", "Category", new {area=""},  new { @style = "color: yellow" })</h4></a>

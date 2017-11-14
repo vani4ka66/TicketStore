@@ -72,7 +72,7 @@ namespace TicketStore.Models.EntityModels
 
         public string Hour { get; set; }
 
-        public string Place { get; set; }
+        public string Location { get; set; }
 
         public string Prices { get; set; }
 
@@ -87,6 +87,8 @@ namespace TicketStore.Models.EntityModels
         public AllCategory AllCategory { get; set; }
 
         public int? Vote { get; set; }
+
+        public int? Views { get; set; }
 
         
 

@@ -12,7 +12,7 @@ namespace TicketStore.Models.ViewModels.Category
     {
         public CategoryViewModel()
         {
-            this.Events = new List<Event>();
+            this.Events = new List<EntityModels.Event>();
         }
 
         [Key]
@@ -25,13 +25,11 @@ namespace TicketStore.Models.ViewModels.Category
         //[Required]
         public string Image { get; set; }
 
-        public virtual ICollection<Event> Events { get; set; }
+        public virtual ICollection<EntityModels.Event> Events { get; set; }
 
         //[Required]
         //[Display(Name = "AllCategory_Id")]
         public int? AllCategoryId { get; set; }
-
-        //public string AllCategoryName { get; set; }
 
         public AllCategory AllCategory { get; set; }
     }

@@ -3,14 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TicketStore.Models.EntityModels;
+using TicketStore.Models.ViewModels;
+using TicketStore.Services;
 
 namespace TicketStore.Controllers
 {
+    [RoutePrefix("home")]
     public class HomeController : Controller
     {
+        public HomeService service;
+
+        //public HomeController()
+        //{
+        //    
+        //}
+
+        public HomeController()
+        {
+            this.service = new HomeService();
+        }
+
+        [Route("index")]
         public ActionResult Index()
         {
-            return this.View();
+            HomeViewModel view = new HomeViewModel()
+            {
+                ConcertsEvents = this.service.GetIndexConcerts(),
+                CultureEvents = this.service.GetIndexCulture().ToList()
+            };
+
+            return this.View(view);
         }
 
         [HttpGet]
@@ -23,27 +46,23 @@ namespace TicketStore.Controllers
 
 
         [HttpGet]
-        [Route("update")]
+        [Route("about")]
         [AllowAnonymous]
-        public ActionResult Update()
-        {
-            return View("Index");
-        }
-
-        //[HttpGet]
-        //[Route("about")]
-        //public PartialViewResult About()
-        //{
-        //    return PartialView("_About");
-        //}
-
-        [HttpGet]
-        //[Route("purchaseticket")]
-        [AllowAnonymous]
-        public ActionResult PurchaseTicket()
+        public ActionResult About()
         {
             return View();
         }
+
+        [HttpPost]
+        [Route("concertsindex")]
+        public PartialViewResult ConcertsIndex()
+        {
+            IEnumerable<Event> events = this.service.GetIndexConcerts();
+
+            return this.PartialView("_ConcertsIndexPartialView", events);
+        }
+
+
 
 
     }

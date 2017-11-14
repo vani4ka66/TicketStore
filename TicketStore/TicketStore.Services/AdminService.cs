@@ -134,7 +134,7 @@ namespace TicketStore.Services
             singleEvent.Content = bind.Content;
             singleEvent.DateDetails = bind.DateDetails;
             singleEvent.Hour = bind.Hour;
-            singleEvent.Place = bind.Place;
+            singleEvent.Location = bind.Location;
             singleEvent.Prices = bind.Prices;
             //singleEvent.PlaceId = bind.PlaceId;
             singleEvent.CityCountry = bind.CityCountry;

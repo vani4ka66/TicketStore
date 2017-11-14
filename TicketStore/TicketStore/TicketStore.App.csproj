@@ -181,8 +181,10 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -264,6 +266,8 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -309,15 +313,19 @@
     <Content Include="Views\Category\Culture.cshtml" />
     <Content Include="Views\Category\Sport.cshtml" />
     <Content Include="Views\Category\OtherEvents.cshtml" />
-    <Content Include="Views\Category\EventsTable.cshtml" />
-    <Content Include="Views\Category\TicketDetails.cshtml" />
+    <Content Include="Views\Event\EventsTable.cshtml" />
+    <Content Include="Views\Event\TicketDetails.cshtml" />
     <Content Include="Views\Customer\MyProfile.cshtml" />
-    <Content Include="Views\Home\PurchaseTicket.cshtml" />
-    <Content Include="Views\Category\EventDetails.cshtml" />
+    <Content Include="Views\Event\EventDetails.cshtml" />
     <Content Include="Views\Shared\Unauthorized.cshtml" />
     <Content Include="Views\Customer\AllCustomers.cshtml" />
-    <Content Include="Views\Home\_Proba.cshtml" />
-    <Content Include="Views\Category\PaymentDetails.cshtml" />
+    <Content Include="Views\Event\PaymentDetails.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Search\SearchForm.cshtml" />
+    <Content Include="Views\Search\_CategorySearch.cshtml" />
+    <Content Include="Views\Search\_EventSearch.cshtml" />
+    <Content Include="Views\Search\_LocationSearch.cshtml" />
+    <Content Include="Views\Home\_ConcertsIndexPartialView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

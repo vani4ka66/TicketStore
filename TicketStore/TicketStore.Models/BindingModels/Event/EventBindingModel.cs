@@ -76,7 +76,7 @@ namespace TicketStore.Models.BindingModels.Event
 
         public string Prices { get; set; }
 
-        public string Place { get; set; }
+        public string Location { get; set; }
 
         //[Required]
         [Display(Name = "Category_Id")]
@@ -87,6 +87,9 @@ namespace TicketStore.Models.BindingModels.Event
         public AllCategory AllCategory { get; set; }
 
         public int? Vote { get; set; }
+
+        public int? Views { get; set; }
+
 
     }
 }
