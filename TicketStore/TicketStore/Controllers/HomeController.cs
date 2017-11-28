@@ -44,7 +44,6 @@ namespace TicketStore.Controllers
             return View();
         }
 
-
         [HttpGet]
         [Route("about")]
         [AllowAnonymous]
@@ -53,17 +52,13 @@ namespace TicketStore.Controllers
             return View();
         }
 
-        [HttpPost]
-        [Route("concertsindex")]
-        public PartialViewResult ConcertsIndex()
+        [HttpGet]
+        [Route("partners")]
+        [AllowAnonymous]
+        public ActionResult Partners()
         {
-            IEnumerable<Event> events = this.service.GetIndexConcerts();
-
-            return this.PartialView("_ConcertsIndexPartialView", events);
+            return View();
         }
-
-
-
 
     }
 }

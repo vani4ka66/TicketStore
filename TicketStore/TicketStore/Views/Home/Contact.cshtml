@@ -2,66 +2,51 @@
     ViewBag.Title = "Contact";
 }
 
-<style>
-    #one {
-        border: 10px solid goldenrod;
-        background-color: blue;
-        width: 300px;
-        height: 200px;
-    }
-    #two {
-        border: 10px solid goldenrod;
-
-        background-color: red;
-        width: 400px;
-        height: 100px;
-    }
-
-    #three {
-        border: 10px solid goldenrod;
-
-        background-color: yellow;
-        width: 50px;
-        height: 200px;
-    }
-
-</style>
-
 <div class="row">
     <div class="col-sm-6">
-        <br/>
-        <br/>
-        <div id="one">
-            <p style="color: blue">ppp</p>
-            <div id="two" class="col-sm-offset-1">
-                <p style="color: red">ppp</p>
+        <div class="col-md-8">
+            <h2 style="color: goldenrod" , align="center">Find us on Google Maps</h2>
+            <br />
+            <div class="mapouter">
+                <div class="gmap_canvas">
+                    <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=бул.„Витоша“ 100, Sofia, България, &t=&z=14&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>wordpress themes by <a href="https://wpicus.com">wpicus</a>
+                </div>
+                <style>
+                    .mapouter {
+                        overflow: hidden;
+                        height: 500px;
+                        width: 660px;
+                    }
 
-                <div id="three" class="col-sm-offset-1"></div>
+                    .gmap_canvas {
+                        background: none !important;
+                        height: 500px;
+                        width: 660px;
+                    }
+                </style>
             </div>
         </div>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
     </div>
     <br/>
     <br/>
     <br/>
     <br/>
     <br/>
-    <div class="col-sm-6">
-        <address>
-            One Microsoft Way<br/>
-            Redmond, WA 98052-6399<br/>
-            <abbr title="Phone">P:</abbr>
-            425.555.0100
-        </address>
+    <div class="col-sm-4" style="color: goldenrod">
+        <center>
+            <address>
+                One Microsoft Way<br />
+                Redmond, WA 98052-6399<br />
+                <abbr title="Phone">P:</abbr>
+                425.555.0100
+            </address>
 
-        <address>
-            <strong>Support:</strong> <a href="mailto:Support@example.com">Support@example.com</a><br/>
-            <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-        </address>
+            <address>
+                <strong>Support:</strong> <a href="mailto:Support@example.com">Support@example.com</a><br />
+                <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+            </address>
+        </center>
+       
         <br/>
         <br/>
         <br/>
@@ -74,6 +59,19 @@
     <br/>
     <br/>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

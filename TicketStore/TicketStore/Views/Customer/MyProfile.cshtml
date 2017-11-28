@@ -5,7 +5,6 @@
 
 }
 
-
 <br>
 <div class="container">
     <div class="row">
@@ -15,117 +14,148 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-2 col-lg-offset-2 toppad", style="color: white">
             <br/>
-                
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="../../Content/images/boy-512.png" class="img-circle img-responsive"> </div>
-                        <div class="col-md-9 col-lg-9 ">
-                            <table >
-                                <tbody>
-                                <tr>
-                                    <td>Name:</td>
-                                    <td class="val">@Html.DisplayFor(vms => vms.FullName)</td>
-                                    <td>
-                                        <a href="edit.html" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
-                                    </td>
-                                </tr>
 
-                                <tr>
-                                    <td>Birth Date:</td>
-                                    <td class="val">26/11/1981</td>
-                                    <td>
-                                        <a href="edit.html" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
-                                    </td>
-                                </tr>
-                                   
-                                <tr>
-                                    <td>Address:</td>
-                                    <td class="val">@Html.DisplayFor(vms => vms.Address)</td>
-                                    <td>
-                                        <a href="edit.html" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
-                                    </td>
-                                </tr>
-                                    <tr>
-                                        <td>Email:</td>
-                                        <td class="val"><a href="mailto:info@support.com">@Html.DisplayFor(vms => vms.Email)</a></td>
-                                        <td>
-                                            <a href="edit.html" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
-                                        </td>
-                                    </tr>
-                                <tr>
-                                    <td>Tel:</td>
-                                    <td class="val">@Html.DisplayFor(vms => vms.Telephone)</td>
-                                    <td>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="../../Content/images/boy-512.png" class="img-circle img-responsive">
+                    </div>
+                    <div class="col-md-9 col-lg-9 ">
+                        <table >
+                            <tbody>
+                            <tr>
+                                <td>Name:</td>
+                                <td class="val">@Html.DisplayFor(vms => vms.FullName)</td>
+                                <td>
                                     <a href="edit.html" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            <br/>
-                            <a href="#" onclick="editProfil()" class="btn btn-primary">Промени профила</a><br/>
-                            <a href="#well" class="btn btn-danger">My last visits</a>
-                        </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Birth Date:</td>
+                                <td class="val">26/11/1981</td>
+                                <td>
+                                    <a href="edit.html" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Address:</td>
+                                <td class="val">@Html.DisplayFor(vms => vms.Address)</td>
+                                <td>
+                                    <a href="edit.html" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Email:</td>
+                                <td class="val"><a href="mailto:info@support.com">@Html.DisplayFor(vms => vms.Email)</a></td>
+                                <td>
+                                    <a href="edit.html" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Tel:</td>
+                                <td class="val">@Html.DisplayFor(vms => vms.Telephone)</td>
+                                <td>
+                                    <a href="edit.html" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <br/>
+                        <a href="#" onclick="editProfil()" class="btn btn-primary">Промени профила</a><br/>
+                        <a onclick="viewLastTen()" href="#last10" class="btn btn-danger">My last visits</a><br/>
+                        <a onclick="viewFavorites()" href="#favorites" class="btn btn-info">My favorite events</a>
                     </div>
                 </div>
-                    <span class="pull-right">
-                        <a href="edit.html" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
-                        <a data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
-                    </span>
-
             </div>
+            <span class="pull-right">
+                <a href="edit.html" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
+                <a data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
+            </span>
+        </div>
     </div>
+    <br/><br/><br/>
+</div>
+
+<div id="last10" hidden="hidden" style="color: goldenrod">
+    <h2>My Last 10 Visits:</h2> <br/>
+@foreach (var m in Model.LastTenEvents)
+{
+    <div class="row">
+        <div class="col-sm-3">
+            @Html.DisplayFor(vms => m.Name)
+        </div>
+        <div class="col-sm-3">
+            @{
+                if ((DateTime.Now - @m.ViewTime).TotalHours >= 24)
+                {
+                    var d = Math.Round((DateTime.Now - @m.ViewTime).TotalDays);
+                    <div>@d days ago</div>
+                }
+                else if ((DateTime.Now - @m.ViewTime).TotalMinutes >= 60)
+                {
+                    var d = Math.Round((DateTime.Now - @m.ViewTime).TotalHours);
+                    <div>@d hours ago</div>
+                }
+                else if ((DateTime.Now - @m.ViewTime).TotalSeconds >= 60)
+                {
+                    var d = Math.Round((DateTime.Now - @m.ViewTime).TotalMinutes);
+
+                    <div>@d minutes ago</div>
+                }
+                else if ((DateTime.Now - @m.ViewTime).TotalSeconds < 60)
+                {
+                    var d = Math.Round((DateTime.Now - @m.ViewTime).TotalSeconds);
+                    <div>@d seconds ago</div>
+                }
+            }
+        </div>
+    </div>
+}
+    <br/>
+@*@using (Html.BeginForm("ClearHistoryLastTen", "Customer", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <button type="submit" class="btn btn-lg btn btn-danger">Clear History</button>
+    }*@
+    <br/>
+    <br/>
+    <br/>
 </div>
 
 
-<div id="well" class="well">
-    <h2>Мойте посещения</h2>
-    <div class="text-right">
-        <a class="btn btn-success">Изчисти историята</a>
+<div id="favorites" hidden="hidden" style="color: goldenrod">
+        <h2>My Favorites:</h2> <br />
+
+        @foreach (var m in Model.FavoriteEvents)
+        {
+            @Html.DisplayFor(vms => m.Name)<br />
+        }
+        <br /><br />
     </div>
 
-    <hr>
+   
+    @section scripts{
+        <script>
+            function editProfil() {
+                let values = $('.val');
+                values.text('');
+                values.append($('<input>').attr('type', 'text'));
+                $('div .col-md-9').append($('<button>').text('Save').attr('class', 'btn btn-primary'));
+            }
+        </script>
 
-    <div class="row">
-        <div class="col-md-12">
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star-empty"></span>
-            Дързост и красота
-            <span class="pull-right">От преди 10 дена</span>
-            <p>This product was great in terms of quality. I would definitely buy another!</p>
-        </div>
-    </div>
-    <hr>
-    <div class="row">
-        <div class="col-md-12">
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star-empty"></span>
-            Концерет на Милко Калайджиев
-            <span class="pull-right">От преди 1 година</span>
-            <p>This product was great in terms of quality. I would definitely buy another!</p>
-        </div>
-    </div>
-    <hr>
+        <script>
+            function viewFavorites() {
+                $('#favorites').removeAttr('hidden');
+            }
+        </script>
 
-
-</div>
-
-<script>
-    function editProfil() {
-        let values = $('.val');
-        values.text('');
-        values.append($('<input>').attr('type', 'text'));
-        $('div .col-md-9').append($('<button>').text('Save').attr('class', 'btn btn-primary'));
-
-
-        $.ajax({
-    
-        });
+        <script>
+            function viewLastTen() {
+                $('#last10').removeAttr('hidden');
+            }
+        </script>
     }
-</script>
+
 

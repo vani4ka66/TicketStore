@@ -34,6 +34,8 @@ namespace TicketStore
                 expression.CreateMap<RegisterViewModel, Customer>();
                 expression.CreateMap<ApplicationUser, CustomerProfileViewModel>();
                 expression.CreateMap<Customer, CustomerProfileViewModel>();
+                expression.CreateMap<CustomerProfileViewModel, Customer>();
+
                 expression.CreateMap<Category, CategoryViewModel>();
                 expression.CreateMap<CategoryBindingModel, Category>();
                 expression.CreateMap<Event, EventViewModel>();

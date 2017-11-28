@@ -12,7 +12,9 @@ namespace TicketStore.Models.ViewModels.Customer
     {
         public CustomerProfileViewModel()
         {
-            this.Events = new HashSet<EntityModels.Event>();
+            this.FavoriteEvents = new HashSet<EntityModels.Event>();
+            this.LastTenEvents = new Queue<EntityModels.Event>();
+
         }
 
         [Key]
@@ -32,7 +34,7 @@ namespace TicketStore.Models.ViewModels.Customer
 
         public virtual ApplicationUser User { get; set; }
 
-        public virtual ICollection<EntityModels.Event> Events { get; set; }
+        public virtual ICollection<EntityModels.Event> FavoriteEvents { get; set; }
 
         public string Address { get; set; }
 
@@ -41,5 +43,8 @@ namespace TicketStore.Models.ViewModels.Customer
         //public string CreditCardNumber { get; set; }
 
         //public string CardHolderName { get; set; }
+
+        public virtual Queue<EntityModels.Event> LastTenEvents { get; set; }
+
     }
 }

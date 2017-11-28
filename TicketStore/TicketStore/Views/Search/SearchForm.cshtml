@@ -1,0 +1,88 @@
+﻿@model TicketStore.Models.ViewModels.All
+
+
+@{
+    ViewBag.Title = "SearchForm";
+}
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+<div class="container">
+    <br/>
+    <br/>
+    <center>
+        <h1 style="color: white">Advanced Search</h1>
+    </center>
+    <br/>
+    <br/>
+    <div class="row text-center">
+        <div class="col-sm-4">
+        </div>
+        @using (Ajax.BeginForm("SearchCategory", new AjaxOptions()
+        {
+            UpdateTargetId = "cont",
+            InsertionMode = InsertionMode.Replace
+        }))
+        {
+            <center>
+                <div class="col-sm-4" style="color: blue">CATEGORY</div><br/>
+                <input id="categoryKeyword" class="form-control" type="text" name="keyword" placeholder="Search Category"/>
+                <input class="btn btn-info" type="submit" value="Search"/>
+                <div>
+                    <br/><br />
+                </div>
+            </center>
+        }
+        <div id="cont">
+            <script>
+                @Html.Partial("_CategorySearch", Model.Categories)
+            </script>
+        </div>
+        @using (Ajax.BeginForm("SearchEvent", new AjaxOptions()
+        {
+            UpdateTargetId = "ev",
+            InsertionMode = InsertionMode.Replace
+        }))
+        {
+            <center>
+                <div class="" style="color: blue">EVENT</div>
+                <input id="eventKeyword" class="form-control" type="text" name="keywordEvent" placeholder="Search Event"/>
+                <input class="btn btn-info" type="submit" value="Search"/>
+                <div>
+                    <br/><br />
+                </div>
+            </center>
+        }
+        <div id="ev">
+            <script>
+                @Html.Partial("_EventSearch", Model.Events)
+            </script>
+        </div>
+        @using (Ajax.BeginForm("SearchLocation", new AjaxOptions()
+        {
+            UpdateTargetId = "loc",
+            InsertionMode = InsertionMode.Replace
+        }))
+        {
+            <center>
+                <div class="" style="color: blue">LOCATION</div>
+                <input id="locationKeyword" class="form-control" type="text" name="keywordLocation" placeholder="Search Location"/>
+                <input class="btn btn-info" type="submit" value="Search"/>
+                <div>
+                    <br/><br/>
+                </div>
+            </center>
+        }
+        <div id="loc">
+            <script>
+                @Html.Partial("_LocationSearch", Model.Events)
+            </script>
+        </div>
+        <br/>
+    </div>
+
+</div>
+
+
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>

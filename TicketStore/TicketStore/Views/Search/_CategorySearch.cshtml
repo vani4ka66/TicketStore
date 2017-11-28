@@ -1,0 +1,6 @@
+﻿@model IEnumerable<TicketStore.Models.EntityModels.Category>
+
+@foreach (var m in Model)
+{
+    <a href="/Event/EventsTable/@Html.DisplayFor(modelItem => m.Id)"><p>@Html.DisplayFor(modelItem => m.Name)</p></a>
+}

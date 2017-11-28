@@ -90,6 +90,10 @@ namespace TicketStore.Models.BindingModels.Event
 
         public int? Views { get; set; }
 
+        public bool IsFavorite { get; set; }
+
+        public DateTime ViewTime { get; set; }
+
 
     }
 }

@@ -12,10 +12,11 @@ namespace TicketStore.Models.EntityModels
         private string name;
         private decimal price;
 
-       //public Event()
-       //{
-       //    this.Prices = new List<int>();
-       //}
+       public Event()
+       {
+           //this.Prices = new List<int>();
+           this.ViewTime = DateTime.Now;
+       }
 
         [Key]
         public int Id { get; set; }
@@ -90,7 +91,10 @@ namespace TicketStore.Models.EntityModels
 
         public int? Views { get; set; }
 
-        
+        public bool IsFavorite { get; set; }
+
+        public DateTime ViewTime { get; set; }
+
 
 
     }

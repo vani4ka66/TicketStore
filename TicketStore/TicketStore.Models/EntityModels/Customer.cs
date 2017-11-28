@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,9 @@ namespace TicketStore.Models.EntityModels
     {
         public Customer()
         {
-            this.Events = new HashSet<Event>();
+            this.FavoriteEvents = new HashSet<Event>();
+            this.LastTenEvents = new Queue<Event>();
+
         }
 
         [Key]
@@ -31,7 +34,7 @@ namespace TicketStore.Models.EntityModels
 
         public virtual ApplicationUser User { get; set; }
 
-        public virtual ICollection<Event> Events { get; set; }
+        public virtual ICollection<Event> FavoriteEvents { get; set; }
 
         public string Address { get; set; }
 
@@ -40,6 +43,8 @@ namespace TicketStore.Models.EntityModels
         //public string CreditCardNumber { get; set; }
 
         //public string CardHolderName { get; set; }
+
+        public virtual Queue<Event> LastTenEvents { get; set; }
 
 
 
